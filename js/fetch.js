@@ -50,7 +50,7 @@ var api = {
       .then(res => res.json());
   },
   details: function (id) {
-    const url = buildUrl(`${ITEMS_URL}${id}`);
+    const url = buildUrl(`${ITEMS_URL}/${id}`);
 
     return fetch(url, {
       method: 'GET',
@@ -74,7 +74,7 @@ var api = {
       .then(res => res.json());
   },  
   update: function (document) {
-    const url = buildUrl(`${ITEMS_URL}${document.id}`);
+    const url = buildUrl(`${ITEMS_URL}/${document.id}`);
     
     console.log('dev tools', document);
 
@@ -89,7 +89,7 @@ var api = {
       .then(res => res.json());
   },
   remove: function (id) {
-    const url = buildUrl(`${ITEMS_URL}${id}`);
+    const url = buildUrl(`${ITEMS_URL}/${id}`);
 
     return fetch(url, {
       method: 'DELETE',
